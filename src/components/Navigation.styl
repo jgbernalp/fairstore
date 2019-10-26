@@ -1,0 +1,82 @@
+@import '../ui/Theme.styl';
+
+.navBar {
+  position: fixed;
+  width: 100%;
+  height: t_top-bar-height;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.active {
+  color: t_primary !important;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  padding-right: 1rem;
+  color: t_secondary;
+}
+
+.links {
+  display: flex;
+  height: 100%;
+  margin: 0 1rem;
+
+  a {
+    padding: 0 0.9rem;
+    color: t_dark;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: bold;
+
+    &:hover {
+      @extend .active;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+
+  &:not(:first-of-type) {
+    margin-left: 0.5rem;
+  }
+}
+
+.cartIcon {
+  path {
+    fill: t_lightgray;
+  }
+}
+
+.personIcon {
+  width: 32px;
+  height: 32px;
+
+  path {
+    fill: t_lightgray;
+  }
+}

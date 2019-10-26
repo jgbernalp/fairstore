@@ -1,0 +1,63 @@
+@import '../ui/Theme.styl';
+
+.home {
+  width: 100%;
+}
+
+.hero::before {
+  content: '';
+  background: url('https://aristorsmi001.blob.core.windows.net/smispi-content/lu/2018/01/manger_bio_desktop.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.hero::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroText {
+  width: 500px;
+
+  h2 {
+    width: 200px;
+    color: white;
+  }
+
+  p {
+    font-size: 2rem;
+    margin: 0.4rem 0;
+    color: t_primary;
+  }
+}
+
+.lastestProds {
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.latestProd {
+  margin: 0.5rem;
+}
+
+.latestTitle {
+  margin: 2rem 0;
+  color: t_primary;
+  font-size: 1.5rem;
+}

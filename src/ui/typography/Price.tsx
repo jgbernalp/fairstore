@@ -6,5 +6,5 @@ interface PriceProps {
 }
 
 export const Price = ({ price }: PriceProps) => (
-  <div className={styles.price}>${price}</div>
+  <div className={styles.price}>€{price}</div>
 );

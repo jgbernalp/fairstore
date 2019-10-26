@@ -1,0 +1,66 @@
+@import '../ui/Theme.styl';
+
+thumbWidth = 10px;
+thumbHeigh = 20px;
+sliderHeight = 5px;
+
+.categories {
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 0.3rem 0;
+    color: t_dark;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: t_primary;
+    }
+  }
+}
+
+.filter {
+  &:not(:first-child) {
+    border-top: solid 1px t_lightgray;
+  }
+
+  padding-bottom: 0.5rem;
+}
+
+.sliderContainer {
+  width: 100%;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: sliderHeight;
+  border-radius: 5px;
+  background: t_lightgray;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: thumbWidth;
+    height: thumbHeigh;
+    background: darken(t_lightgray, 20);
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: thumbWidth;
+    height: thumbHeigh;
+    background: darken(t_lightgray, 20);
+    cursor: pointer;
+  }
+}
+
+.container {
+  width: 400px;
+  padding-right: 2rem;
+}

@@ -1,33 +1,16 @@
-import { h } from "preact";
-import { Router, Link } from "preact-router";
-import { Home } from "./views/Home";
-import { Products } from "./views/Products";
-import { Farmers } from "./views/Farmers";
-import styles from "./App.styl";
+import { h } from 'preact';
+import { Router } from 'preact-router';
+import { Home } from './views/Home';
+import { Products } from './views/Products';
+import { Farmers } from './views/Farmers';
+import styles from './App.styl';
+import { Navigation } from './components/Navigation';
 
 export const App = () => {
   return (
     <div className={styles.app}>
-      <nav>
-        <ul>
-          <li>
-            <Link activeClassName="active" href="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link activeClassName="active" href="/products">
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link activeClassName="active" href="/farmers">
-              Farmers
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <section>
+      <Navigation />
+      <section className={styles.section}>
         <Router>
           <Home path="/" />
           <Products path="/products" />

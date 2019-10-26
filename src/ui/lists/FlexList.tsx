@@ -1,6 +1,17 @@
-import { h, ComponentChildren } from "preact";
-import styles from "./FlexList.styl";
+import { h, ComponentChildren, JSX } from 'preact';
+import styles from './FlexList.styl';
+import { classNames } from '../../utils/classNames';
 
-export const FlexList = ({ children }: { children: ComponentChildren }) => (
-  <div className={styles.list}>{children}</div>
+interface FlexListProps {
+  fill?: boolean;
+  center?: boolean;
+}
+
+export const FlexList = ({
+  children,
+  className,
+  fill,
+  center,
+}: { children: ComponentChildren } & JSX.HTMLAttributes & FlexListProps) => (
+  <div className={classNames(styles.list, className, fill ? styles.fill : undefined, center ? styles.center :undefined)}>{children}</div>
 );
