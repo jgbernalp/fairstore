@@ -26,14 +26,20 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
++bp-xsmall() {
+  .hero {
+    height: 400px;
+  }
+}
+
 .heroText {
-  width: 500px;
+  max-width: 500px;
 
   h2 {
     width: 200px;

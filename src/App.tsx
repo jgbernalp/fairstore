@@ -4,14 +4,16 @@ import { Home } from './views/Home';
 import { Products } from './views/Products';
 import { Farmers } from './views/Farmers';
 import styles from './App.styl';
-import { Navigation } from './components/Navigation';
+import { NavigationConnected } from './components/Navigation';
 import { ProductDetail } from './views/ProductDetail';
 import { Footer } from './components/Footer';
+
+
 
 export const App = () => {
   return (
     <div className={styles.app}>
-      <Navigation />
+      <NavigationConnected />
       <section className={styles.section}>
         <Router>
           <Home path="/" />
