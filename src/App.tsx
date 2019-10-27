@@ -5,6 +5,8 @@ import { Products } from './views/Products';
 import { Farmers } from './views/Farmers';
 import styles from './App.styl';
 import { Navigation } from './components/Navigation';
+import { ProductDetail } from './views/ProductDetail';
+import { Footer } from './components/Footer';
 
 export const App = () => {
   return (
@@ -14,8 +16,10 @@ export const App = () => {
         <Router>
           <Home path="/" />
           <Products path="/products" />
+          <ProductDetail path="/products/:productId" />
           <Farmers path="/farmers" />
         </Router>
+        <Footer />
       </section>
     </div>
   );

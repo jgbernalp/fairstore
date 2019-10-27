@@ -1,0 +1,62 @@
+@import '../Theme.styl';
+
+.container {
+  border: solid 1px t_lightgray;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  background-color: t_lightgray;
+  display: flex;
+  margin: 0;
+  padding: 0.4rem 0.5rem;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  svg {
+    width: 20px;
+  }
+
+  path {
+    fill: t_secondary;
+  }
+}
+
+.add {
+  border-left: solid 1px t_lightgray;
+}
+
+.less {
+  border-right: solid 1px t_lightgray;
+}
+
+.input {
+  text-align: center;
+  margin: 0;
+  width: 35px;
+  border: none;
+
+  &:disabled {
+    color: t_dark;
+  }
+
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  -moz-appearance: textfield;
+}

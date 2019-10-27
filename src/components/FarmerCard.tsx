@@ -1,5 +1,5 @@
 import { h, JSX } from 'preact';
-import { Card, CardContent } from '../ui/card/Card';
+import { Card } from '../ui/card/Card';
 import { Title } from '../ui/typography/Title';
 import styles from './FarmerCard.styl';
 import { Avatar } from '../ui/avatar/Avatar';
@@ -15,22 +15,20 @@ export interface ProcuctCardProps {
 export const FarmerCard = ({ farmer, className }: ProcuctCardProps & JSX.HTMLAttributes) => {
   return (
     <Card className={classNames(className, styles.farmerCard)}>
-      <CardContent>
-        <FlexRows>
-          <FlexCols center>
-            <Avatar src={farmer.avatar} />
-            <FlexRows>
-              <Title h4 className={styles.title}>
-                {farmer.name}
-              </Title>
-              <Title h6 className={styles.subtitle}>
-                Country
-              </Title>
-            </FlexRows>
-          </FlexCols>
-          {farmer.intro && <p className={styles.intro}>{farmer.intro}</p>}
-        </FlexRows>
-      </CardContent>
+      <FlexRows>
+        <FlexCols center>
+          <Avatar src={farmer.avatar} />
+          <FlexRows>
+            <Title h4 className={styles.title}>
+              {farmer.name}
+            </Title>
+            <Title h6 className={styles.subtitle}>
+              Country
+            </Title>
+          </FlexRows>
+        </FlexCols>
+        {farmer.intro && <p className={styles.intro}>{farmer.intro}</p>}
+      </FlexRows>
     </Card>
   );
 };

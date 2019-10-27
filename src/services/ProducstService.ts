@@ -2,6 +2,7 @@ import { Product } from '../models/Product';
 
 export const products: ReadonlyArray<Product> = [
   {
+    id: '1',
     name: 'Avocado',
     image: 'https://img.etimg.com/thumb/msid-69268059,width-643,imgsize-164253,resizemode-4/avocados.jpg',
     price: 100,
@@ -12,6 +13,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '2',
     name: 'Coffee',
     image:
       'https://athome.starbucks.com/sites/site.prod.athome.starbucks.com/files/2019-06/CoffeeFinder_ArticleHeader_Desktop_1176x712.jpg',
@@ -23,6 +25,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '3',
     name: 'Garlic',
     image: 'https://cdn.editorchoice.com/wp-content/uploads/2019/07/garlic.jpg',
     price: 140,
@@ -33,6 +36,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '4',
     name: 'Strawberries',
     image: 'https://cdn.theatlantic.com/assets/media/img/mt/2019/08/RTR4FJJS/lead_720_405.jpg?mod=1567003290',
     price: 42,
@@ -43,6 +47,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '5',
     name: 'Grapes',
     image: 'https://cdn.shopify.com/s/files/1/1359/5939/products/10_24_2011_6_1400x.jpg?v=1529969229',
     price: 52,
@@ -53,6 +58,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '6',
     name: 'Bread',
     image:
       'https://www.thespruceeats.com/thmb/2blr6l0u64ETt4Fpdi-lfGnXL8w=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-155279113-582681813df78c6f6a39e2c6.jpg',
@@ -63,6 +69,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '7',
     name: 'Cheese',
     image:
       'https://www.vegetariantimes.com/.image/t_share/MTQ2ODI5MzI5MzA5NzcxNzM2/how-to-buy-veg-friendly-cheesejpg.jpg',
@@ -74,6 +81,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '8',
     name: 'Hess Avocado',
     image:
       'https://i0.wp.com/www.ediblebackyard.co.nz/wp-content/uploads/2017/11/avocados-2.jpg?resize=699%2C427',
@@ -85,6 +93,7 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '9',
     name: 'Cocoa',
     image:
       'https://cdn11.bigcommerce.com/s-ham8sjk/images/stencil/1280x1280/products/276/836/Cacao_Chocolate_Chocolate_Liquor__1551729718_104.172.159.225__96045.1551729753.jpg?c=2&imbypass=on',
@@ -96,31 +105,31 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '10',
     name: 'Mango',
     image:
       'https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/6/1/6/1/7231616-1-eng-GB/Senegal-is-ready-to-supply-US-mangoes_wrbm_large.jpg',
     price: 30,
     farmer: {
       name: 'Larry',
-      avatar:
-        'https://cdn.newsapi.com.au/image/v1/b2061724827fe49c6521fea950b514cd?width=1024',
+      avatar: 'https://cdn.newsapi.com.au/image/v1/b2061724827fe49c6521fea950b514cd?width=1024',
     },
   },
   {
+    id: '11',
     name: 'Peach',
     image:
       'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fresh-organic-peaches-in-wooden-crate-viewed-from-royalty-free-image-584718022-1558541036.jpg?crop=0.667xw:1.00xh;0.333xw,0&resize=640:*',
     price: 20,
     farmer: {
       name: 'Joao',
-      avatar:
-        'http://farmflavor.com/wp-content/uploads/2013/01/1540712jso6331.jpg',
+      avatar: 'http://farmflavor.com/wp-content/uploads/2013/01/1540712jso6331.jpg',
     },
   },
   {
+    id: '12',
     name: 'Date',
-    image:
-      'https://cdn2.stylecraze.com/wp-content/uploads/2014/08/8_Serious_Side_Effects_Of_Dates.jpg',
+    image: 'https://cdn2.stylecraze.com/wp-content/uploads/2014/08/8_Serious_Side_Effects_Of_Dates.jpg',
     price: 10,
     farmer: {
       name: 'Wadi',
@@ -129,9 +138,9 @@ export const products: ReadonlyArray<Product> = [
     },
   },
   {
+    id: '13',
     name: 'Ginger',
-    image:
-      'http://www.ecorazzi.com/wp-content/uploads/2013/06/ginger.jpg',
+    image: 'http://www.ecorazzi.com/wp-content/uploads/2013/06/ginger.jpg',
     price: 13,
     farmer: {
       name: 'Santu',
@@ -144,4 +153,4 @@ export const products: ReadonlyArray<Product> = [
 export const latestProducts: ReadonlyArray<Product> = products
   .concat([])
   .sort(() => Math.random() - 0.5)
-  .slice(0, 5);
+  .slice(0, 4);

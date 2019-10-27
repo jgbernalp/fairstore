@@ -1,0 +1,59 @@
+@import '../Theme.styl';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    padding: 0.1rem
+    margin: 0 0.3rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 0.275rem 0.85rem;
+  line-height: 1.7;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &:disabled {
+    border-color: transparent;
+  }
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+
+.primary {
+  background-color: t_primary;
+  border: solid 1px t_primary;
+  color: white;
+
+  path {
+    fill: white;
+  }
+}
+
+.secondary {
+  background-color: t_secondary;
+  border: solid 1px t_secondary;
+  color: white;
+
+  path {
+    fill: white;
+  }
+}

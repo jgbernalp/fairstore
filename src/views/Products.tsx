@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { RoutableProps } from 'preact-router';
+import { RoutableProps, Link } from 'preact-router';
 import { ProductCard } from '../components/ProductCard';
 import { FlexList } from '../ui/lists/FlexList';
 import { Product } from '../models/Product';
@@ -16,7 +16,9 @@ export const Products = (props: RoutableProps) => (
       <ProductFilters />
       <FlexList>
         {products.map(product => (
-          <ProductCard className={styles.productCard} product={product} />
+          <Link href={`/products/${product.id}`}>
+            <ProductCard className={styles.productCard} product={product} />
+          </Link>
         ))}
       </FlexList>
     </FlexCols>
