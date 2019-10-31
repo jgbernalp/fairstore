@@ -12,9 +12,9 @@ export interface ProcuctCardProps {
   product: Product;
 }
 
-export const ProductCard = ({ product, className }: ProcuctCardProps & JSX.HTMLAttributes) => {
+export const ProductCard = ({ product }: ProcuctCardProps & JSX.HTMLAttributes) => {
   return (
-    <Card className={className}>
+    <Card>
       <img className={styles.img} src={product.image} />
 
       <FlexCols fill className={styles.container}>

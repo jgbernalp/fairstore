@@ -153,4 +153,4 @@ export const products: ReadonlyArray<Product> = [
 export const latestProducts: ReadonlyArray<Product> = products
   .concat([])
   .sort(() => Math.random() - 0.5)
-  .slice(0, 4);
+  .slice(0, 5);

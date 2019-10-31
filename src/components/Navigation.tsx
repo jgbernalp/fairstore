@@ -12,6 +12,7 @@ import { MenuIcon } from '../icons/MenuIcon';
 import { connect } from 'unistore/preact';
 import { navigationActions } from '../store/navigationActions';
 import { State } from '../store/State';
+import { Grid } from '../ui/grid/Grid';
 
 interface NavigationConnectedProps {
   isMenuOpen: boolean;
@@ -45,17 +46,19 @@ const Navigation = ({ isMenuOpen, setMenuOpen }: NavigationConnectedProps) => {
       <div className={classNames(styles.sideMenu, isMenuOpen && styles.open)}>{links}</div>
       <div className={styles.navBar}>
         <Wrapper className={styles.wrapper}>
-          <button className={styles.menuBtn} onClick={handleMenuClick(setMenuOpen, true)}>
-            <MenuIcon className={bp.showSM} />
-          </button>
-          <div className={styles.logo}>FairStore</div>
-          <div className={styles.right}>
-            <SearchBar className={classNames(styles.searchBar, bp.hideXS)} />
-            <SearchIcon className={classNames(styles.searchIcon, bp.showXS)} />
-            <div className={classNames(styles.linksContainer, bp.hideSM)}>{links}</div>
-            <ShoppingCartIcon className={classNames(styles.cartIcon, styles.icon)} />
-            <PersonIcon className={classNames(styles.personIcon, styles.icon)} />
-          </div>
+          <Grid gridCols="min-content min-content auto" gridRows="70px" alignItems="center">
+            <button className={styles.menuBtn} onClick={handleMenuClick(setMenuOpen, true)}>
+              <MenuIcon className={bp.showSM} />
+            </button>
+            <div className={styles.logo}>FairStore</div>
+            <div className={styles.right}>
+              <SearchBar className={classNames(styles.searchBar, bp.hideXS)} />
+              <SearchIcon className={classNames(styles.searchIcon, bp.showXS)} />
+              <div className={classNames(styles.linksContainer, bp.hideSM)}>{links}</div>
+              <ShoppingCartIcon className={classNames(styles.cartIcon, styles.icon)} />
+              <PersonIcon className={classNames(styles.personIcon, styles.icon)} />
+            </div>
+          </Grid>
         </Wrapper>
       </div>
     </div>

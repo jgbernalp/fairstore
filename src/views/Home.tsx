@@ -3,11 +3,11 @@ import { RoutableProps, Link } from 'preact-router';
 import styles from './Home.styl';
 import { Wrapper } from '../ui/containers/Wrapper';
 import { Title } from '../ui/typography/Title';
-import { FlexList } from '../ui/lists/FlexList';
 import { latestProducts } from '../services/ProducstService';
 import { ProductCard } from '../components/ProductCard';
+import { Grid } from '../ui/grid/Grid';
 
-export const Home = (props: RoutableProps) => (
+export const Home = (_: RoutableProps) => (
   <div className={styles.home}>
     <div className={styles.hero}>
       <Wrapper>
@@ -18,17 +18,17 @@ export const Home = (props: RoutableProps) => (
       </Wrapper>
     </div>
     <div className={styles.lastestProds}>
-      <Wrapper>
+      <Wrapper verticalPadding="2rem">
         <Title className={styles.latestTitle} h4 center>
           Latest products
         </Title>
-        <FlexList center>
+        <Grid gridCols="repeat(auto-fill, minmax(200px, 1fr))" justifyContent="center">
           {latestProducts.map(product => (
             <Link href={`/products/${product.id}`}>
-              <ProductCard className={styles.latestProd} product={product} />
+              <ProductCard product={product} />
             </Link>
           ))}
-        </FlexList>
+        </Grid>
       </Wrapper>
     </div>
   </div>

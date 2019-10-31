@@ -1,18 +1,17 @@
 import { h } from 'preact';
 import { RoutableProps } from 'preact-router';
-import { FlexList } from '../ui/lists/FlexList';
 import { farmers } from '../services/FarmersService';
 import { FarmerCard } from '../components/FarmerCard';
 
-import styles from './Farmers.styl';
 import { Wrapper } from '../ui/containers/Wrapper';
+import { Grid } from '../ui/grid/Grid';
 
-export const Farmers = (props: RoutableProps) => (
-  <Wrapper className={styles.container}>
-    <FlexList center>
+export const Farmers = (_: RoutableProps) => (
+  <Wrapper verticalPadding="1rem">
+    <Grid gridCols="repeat(auto-fill, minmax(250px, 1fr))">
       {farmers.map(farmer => (
-        <FarmerCard className={styles.farmerCard} farmer={farmer} />
+        <FarmerCard farmer={farmer} />
       ))}
-    </FlexList>
+    </Grid>
   </Wrapper>
 );

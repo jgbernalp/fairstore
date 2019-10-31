@@ -1,10 +1,10 @@
-import { h } from 'preact';
+import { h, Fragment } from 'preact';
 import styles from './ProductFilters.styl';
 import { Title } from '../ui/typography/Title';
 
 export const ProductFilters = () => {
   return (
-    <div className={styles.container}>
+    <Fragment>
       <div className={styles.filter}>
         <Title h5>Categories</Title>
         <div className={styles.categories}>
@@ -24,6 +24,6 @@ export const ProductFilters = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
