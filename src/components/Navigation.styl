@@ -105,7 +105,10 @@
   background-color: transparent;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: 0;
+  width: 45px;
+  height: t_top-bar-height;
 
   &:focus {
     outline: none;
@@ -184,11 +187,18 @@
 }
 
 .grid {
-  grid-template-areas: 'sideMenu logo right';
+  grid-template-areas: 'sideMenu right';
   grid-template-columns: min-content auto;
-  grid-template-rows: 70px;
+  grid-template-rows: t_top-bar-height;
   align-items: center;
-  gap: 1rem;
+  gap: 0.2rem;
+}
+
++bp-xsmall() {
+  .grid {
+    gap: 1rem;
+    grid-template-areas: 'sideMenu logo right';
+  }
 }
 
 +bp-small() {
