@@ -1,0 +1,28 @@
+@import '../ui/Theme.styl';
+
+.productsContainerGrid {
+  grid-template-areas: 'productGrid';
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.filterArea {
+  display: none;
+}
+
+.productsGrid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+}
+
++bp-medium() {
+  .productsContainerGrid {
+    grid-template-areas: 'filter productGrid';
+    grid-template-columns: 200px minmax(200px, 1fr);
+  }
+
+  .filterArea {
+    display: block;
+  }
+}

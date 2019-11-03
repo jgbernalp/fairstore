@@ -20,22 +20,20 @@
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: white;
   font-weight: bold;
-  padding-right: 1rem;
   color: t_secondary;
   flex: 1;
 }
 
 .links {
-  display: flex;
   height: 100%;
-  margin: 0 1rem;
   text-align: center;
+  gap: 1.2rem;
+  grid-template-columns: repeat(3, auto);
 
   a {
-    padding: 0 0.9rem;
     color: t_dark;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -58,11 +56,24 @@
   height: 100%;
 }
 
-.right {
+.rightCol {
+  align-self: stretch;
+  grid-template-areas: 'search icons';
+  align-items: center;
+  justify-content: end;
+  justify-items: center;
+  gap: 1rem;
+}
+
++bp-small() {
+  .rightCol {
+    grid-template-areas: 'search links icons';
+  }
+}
+
+.iconsCol {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  height: 100%;
 }
 
 .icon {
@@ -89,20 +100,20 @@
   }
 }
 
-.searchIcon {
-  path {
-    fill: t_primary;
-  }
-}
-
 .menuBtn {
   border: none;
   background-color: transparent;
   display: flex;
   align-items: center;
+  padding: 0;
 
   &:focus {
     outline: none;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
   }
 
   path {
@@ -123,13 +134,43 @@
 
   .links {
     height: auto;
-    flex-direction: column;
-    margin-top: t_top-bar-height;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, min-content);
+    padding: 0 1.5rem;
 
     a {
+      font-size: 1rem;
       color: t_lightgray;
       height: 40px;
     }
+  }
+}
+
+.sideMenuHeader {
+  display: flex;
+  height: t_top-bar-height;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.closeBtn {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  height: t_top-bar-height;
+  width: t_top-bar-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  path {
+    fill: white;
   }
 }
 
@@ -140,4 +181,18 @@
 .open {
   transform: translateX(0);
   z-index: 2;
+}
+
+.grid {
+  grid-template-areas: 'sideMenu logo right';
+  grid-template-columns: min-content auto;
+  grid-template-rows: 70px;
+  align-items: center;
+  gap: 1rem;
+}
+
++bp-small() {
+  .grid {
+    grid-template-areas: 'logo right';
+  }
 }

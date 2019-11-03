@@ -22,7 +22,7 @@ export const Home = (_: RoutableProps) => (
         <Title className={styles.latestTitle} h4 center>
           Latest products
         </Title>
-        <Grid gridCols="repeat(auto-fill, minmax(200px, 1fr))" justifyContent="center">
+        <Grid className={styles.grid}>
           {latestProducts.map(product => (
             <Link href={`/products/${product.id}`}>
               <ProductCard product={product} />

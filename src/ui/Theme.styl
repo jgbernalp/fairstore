@@ -1,63 +1,8 @@
+@import './Breakpoints.styl';
+
 t_primary = #00C9D3;
 t_secondary = #FF0022;
 t_dark = #50514F;
 t_gray = #B0B1C1;
 t_lightgray = #dddddd;
-
 t_top-bar-height = 70px;
-
-xsmall_breakpoint = 540;
-small_breakpoint = 720;
-medium_breakpoint = 960;
-
-_bp-fn(minWidth) {
-  @media screen and (min-width: unit(minWidth, px)) {
-    :local {
-      {block};
-    }
-  }
-}
-
-_bp-fn-max(maxWidth) {
-  @media screen and (max-width: unit(maxWidth, px)) {
-    :local {
-      {block};
-    }
-  }
-}
-
-bp-xsmall() {
-  +_bp-fn(xsmall_breakpoint) {
-    {block};
-  }
-}
-
-bp-small() {
-  +_bp-fn(small_breakpoint) {
-    {block};
-  }
-}
-
-bp-medium() {
-  +_bp-fn(medium_breakpoint) {
-    {block};
-  }
-}
-
-bp-xsmall-max() {
-  +_bp-fn-max(xsmall_breakpoint) {
-    {block};
-  }
-}
-
-bp-small-max() {
-  +_bp-fn-max(small_breakpoint) {
-    {block};
-  }
-}
-
-bp-medium-max() {
-  +_bp-fn-max(medium_breakpoint) {
-    {block};
-  }
-}
