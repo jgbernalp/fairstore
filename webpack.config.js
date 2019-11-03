@@ -15,7 +15,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    // publicPath: '/',
     filename: 'main.[chunkhash].js',
     chunkFilename: `[name].[chunkhash].js`,
     jsonpFunction: 'jsonpFairStore',
